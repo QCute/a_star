@@ -21,12 +21,12 @@
 %%%===================================================================
 %%% API
 %%%===================================================================
-
 %% @doc find
 -spec find(Id :: non_neg_integer(), Start :: point(), End :: point()) -> Path :: [point()].
 find(Id, Start, End) ->
     find(Id, Start, End, fun(_, _) -> true end).
 
+%% @doc find
 -spec find(Id :: non_neg_integer(), Start :: point(), End :: point(), Callback :: {Module :: module(), Function :: atom()} | fun((Id :: non_neg_integer(), Point :: point()) -> boolean())) -> Path :: [point()].
 find(Id, Start, End, Walkable) ->
     State = #state{
