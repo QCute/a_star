@@ -1,0 +1,11 @@
+{
+    application, a_star,
+    [
+        {description, "A* path finding algorithm"},
+        {vsn, "1.0.0"},
+        {registered, []},
+        {applications, [kernel, stdlib]},
+        {modules, [a_star]},
+        {env, []}
+    ]
+}.
